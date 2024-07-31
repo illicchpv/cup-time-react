@@ -1,0 +1,32 @@
+day1 ---------------------
+
+? - это я сомниваюсь в правильности
+! - это хорошо 
+
+index
+ ? href="#!"  почему '!'  ?
+ 
+ !  aria-label="канал в телеграмм" ...
+ 
+ ?  class="footer__logo logo" - может второй класс не нужен
+ 
+ ! <nav class="header__nav nav">
+	<div class="footer__nav nav">
+		по мне у тебя правильнее чем у Максима. я тупо повторял
+		
+ ? <a footer__link href="https://t.me/Mrshmallowww" target="_blank">Anastasia Ilina</a></li> - footer__link опечатка	
+		
+order
+ ! <h1 class="visually-hidden">Корзина товаров</h1>
+ 
+ ? <h2 class="cart__title h2">Корзина (6)</h2> - "cart__title h2" h2 наверно опечатка
+
+ ! <div class="cart__product-quantity quantity">... - лучше чем у меня, БЕМнее
+ 
+ ? <p class="cart__total-text">Итого:</p>
+   <p class="cart__total-price">2200 ₽</p> - возможно обёртка понадобится чтобы как в макете сделать
+   
+ ! <button class="cart__submit" form="order">Заказать</button> - а я всё думал где submit у формы
+ 
+ ! <fieldset class="order__... - да, это наверно правилно. у меня криво
+ 
