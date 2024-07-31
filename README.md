@@ -39,3 +39,5 @@ day3
 - Повторить то, что было в видео
 - Написать адаптив для Footer
 
+[+ день3 дз](https://github.com/illicchpv/cup-time-react/tree/day3-home)
+--
