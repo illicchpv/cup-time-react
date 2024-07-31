@@ -28,6 +28,11 @@ export const Header = () => {
         </nav>
 
         <a className="header__cart-link" href="cart.html">6</a>
+
+        <div className="header__mobile-menu">
+          <a className="header__cart-link" href="cart.html">6</a>
+          <a className="header__menu-link" href="#"></a>
+        </div>
       </div>
     </header>
   );

@@ -2,6 +2,7 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <div className="container footer__container">
+
         <a className="footer__logo-link" href="#">
           <img className="footer__logo" src="./image/logo.svg" alt="Cup time логотип" />
         </a>
