@@ -8,7 +8,7 @@ export const Product = ({title, price, image}) => {
         <div className="product__content">
           <h3 className="product__title">{title}</h3>
 
-          <p className="product__price">{price} ₽</p>
+          <p className="product__price">{price}&nbsp;₽</p>
         </div>
       </article>
     </li>

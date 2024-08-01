@@ -45,6 +45,16 @@ day3
 ---
 day4  
 
+Полезные ссылки  
+- [React Router Dom](https://reactrouter.com/en/main/router-components/router)
+
 повторяем за Максимом дз.
 
 >npm install react-router-dom
+
+Обязательное задание:  
+- Повторить то, что было в видео
+- Сделайте адаптив корзины
+
+Бонус задание:  
+- Напишите разметку блока footer

@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 import {Footer} from "./modules/Footer";
 import {Header} from "./modules/Header";
 import {Main} from "./modules/Main";
