@@ -46,3 +46,5 @@ day3
 day4  
 
 повторяем за Максимом дз.
+
+>npm install react-router-dom

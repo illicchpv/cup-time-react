@@ -1,3 +1,4 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import {Footer} from "./modules/Footer";
 import {Header} from "./modules/Header";
 import {Main} from "./modules/Main";
@@ -5,7 +6,7 @@ import {Main} from "./modules/Main";
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
 
       <Header />
 
@@ -13,7 +14,7 @@ function App() {
 
       <Footer />
 
-    </>
+    </BrowserRouter>
   );
 }
 
