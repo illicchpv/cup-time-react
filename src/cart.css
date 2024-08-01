@@ -16,12 +16,14 @@
   font-size: 54px;
   line-height: 1.1;
   color: #64099b;
+  order: 1;
 }
 
 .cart__items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+  order: 2;
 }
 
 .cart__summary {
@@ -36,6 +38,7 @@
   background: #f2f9f7;
   color: #1d1c1d;
   border-radius: 6px;
+  order: 3;
 }
 
 .cart__summary-title {
