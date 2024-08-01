@@ -41,3 +41,8 @@ day3
 
 [+ день3 дз](https://github.com/illicchpv/cup-time-react/tree/day3-home)
 --
+
+---
+day4  
+
+повторяем за Максимом дз.
