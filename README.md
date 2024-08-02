@@ -58,3 +58,10 @@ day4
 
 Бонус задание:  
 - Напишите разметку блока footer
+
+[трансляция](https://www.youtube.com/watch?v=s202RhBo8bE)  
+35:0 про 	заголовок карточки
+
+https://codepen.io/Quper/pen/GRRZzWy
+	Базовые стили CSS
+

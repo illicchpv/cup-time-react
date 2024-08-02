@@ -164,6 +164,8 @@ input[type="number"] {
 }
 
 .product {
+  border-radius: 6px;
+  overflow: hidden;
   font-size: 0;
   background: #f2f9f7;
   min-height: 600px;
