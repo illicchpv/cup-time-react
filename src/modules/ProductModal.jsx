@@ -17,7 +17,7 @@ Modal.setAppElement('#root');
 export const ProductModal = ({isOpen, onRequestClose, data}) => {
   if (!data) return null;
   const {img: image, title, price, additional = {}} = data;
-  console.log('additional: ', additional);
+  // console.log('additional: ', additional);
 
   return (
     <Modal style={customStyles}
@@ -25,19 +25,35 @@ export const ProductModal = ({isOpen, onRequestClose, data}) => {
       onRequestClose={onRequestClose}
       contentLabel="Product Modal"
     >
-      <h2>{title}</h2>
+      <div className="product-modal__container">
 
-      <img src={`${API_URL}${image}`} alt={title} />
+        <div className="product-modal__image-block">
+          <img src={`${API_URL}${image}`} alt={title} 
+          />
+        </div>
 
-      <p>{price}</p>
+        <div className="product-modal__info">
 
-      <ul>
-        {Object.entries(additional).map(([key, val]) => (
-          <li key={key}><strong>{key}:</strong> {val}</li>
-        ))}
-      </ul>
+          <div className="product-modal__info-main">
+            <h2>{title}</h2>
 
-      <button onClick={onRequestClose}>Закрыть</button>
+            <p>{price}&nbsp;₽</p>
+            <button onClick={onRequestClose}></button>
+          </div>
+
+          <ul className="product-modal__info-additional">
+            {Object.entries(additional).map(([key, val]) => (
+              <li key={key}><strong>{key}:</strong> <span>{val}</span></li>
+            ))}
+          </ul>
+
+          <div className="sale-block">
+
+          </div>
+
+        </div>
+
+      </div>
     </Modal>
   );
 };
