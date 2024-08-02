@@ -11,4 +11,19 @@ https://cup-time-api-q31j.onrender.com/api/products
 /api/products // Получить все продукты
 /api/products/list?ids=1,2,3 // получить список товаров по id (1,2,3 для примера)
 /api/orders // POST запрос для отправки заказа
+
+
+
+{
+    "id": 1,
+    "title": "Кокосовая матча",
+    "img": "/images/tea1.jpg",
+    "price": 390,
+    "additional": {
+        "вес": "100 г",
+        "дата сбора": "14.08.2023",
+        "страна": "Япония"
+    }
+}
+    
 */

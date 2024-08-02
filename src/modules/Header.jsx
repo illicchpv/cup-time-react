@@ -11,19 +11,19 @@ export const Header = () => {
         <nav className="header__nav">
           <ul className="header__menu">
             <li className="header__menu-item">
-              <a className="header__menu-link" href="#">Чай</a>
+              <Link className="header__menu-link" to="/products?category=еуф">Чай</Link>
             </li>
             <li className="header__menu-item">
-              <a className="header__menu-link" href="#">Кофе</a>
+              <a className="header__menu-link" to="/products?category=coffee">Кофе</a>
             </li>
             <li className="header__menu-item">
-              <a className="header__menu-link" href="#">Чайники</a>
+              <Link className="header__menu-link" to="/products?category=teapots">Чайники</Link>
             </li>
             <li className="header__menu-item">
-              <a className="header__menu-link" href="#">Турки</a>
+              <a className="header__menu-link" to="/products?category=cezves">Турки</a>
             </li>
             <li className="header__menu-item">
-              <a className="header__menu-link" href="#">Прочее</a>
+              <Link className="header__menu-link" to="/products?category=other">Прочее</Link>
             </li>
           </ul>
         </nav>
