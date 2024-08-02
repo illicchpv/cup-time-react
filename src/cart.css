@@ -50,8 +50,10 @@
 
 .cart__total {
   grid-area: total;
-  font-weight: 400;
   font-size: 20px;
+  font-weight: 400;
+  color: #1d1c1d;
+  margin: 0;
 }
 
 .cart__order-button {
@@ -86,8 +88,13 @@
 .cart-item__title {
   font-weight: 400;
   font-size: 20px;
-  color: #1d1c1d;
+  margin-top: 0;
   margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  color: #1d1c1d;
 }
 
 .cart-item__quantity {
@@ -126,6 +133,7 @@
 }
 
 .cart-item__price {
+  margin: 0;
   font-size: 20px;
 }
 
@@ -139,6 +147,8 @@
   font-size: 54px;
   line-height: 1.1;
   color: #64099b;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .order__container {}
