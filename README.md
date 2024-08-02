@@ -89,3 +89,5 @@ https://my.methed.ru/pl/teach/control/lesson/view?id=332318735&editMode=0
   [мой сервис товаров](https://cup-time-api-q31j.onrender.com)
 
 >npm i react-modal  
+
+---
