@@ -172,14 +172,65 @@
     grid-template-areas:
       "title button"
       "total button";
+    /* grid-template-columns: auto min-content; */
   }
 
-  .cart__summary-title{
+  .cart__summary-title {
     font-size: 16px;
   }
 
-  .cart__total{
+  .cart__total {
     font-size: 16px;
   }
+
+  .cart__order-button {
+    justify-self: end;
+  }
+
+  .order {
+    padding: 30px 0 60px;
+  }
+
+  .order__title {
+    font-size: 36px;
+  }
+
+  .order__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 640px;
+  }
+
+  .order__input {
+    border-radius: 4px;
+    border: none;
+    padding: 17px 16px;
+  }
+
+  .order__input::placeholder {
+    font-size: 16px;
+    line-height: 1.24;
+    color: #b8b8b8;
+  }
+
+  .order__payment {
+    padding-top: 12px;
+  }
+
+  .order__payment-title {
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .order__payment-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+
 
 }

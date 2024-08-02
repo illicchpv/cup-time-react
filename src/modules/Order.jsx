@@ -4,7 +4,7 @@ export const Order = () => {
       <div className="container order__container">
         <h2 className="order__title">Доставка</h2>
 
-        <form className="order-form">
+        <form className="order__form">
           {/* <fieldset className="order__data-fields"> */}
             <input className="order__input order__input_name" name="name" type="text" placeholder="Имя" />
 
