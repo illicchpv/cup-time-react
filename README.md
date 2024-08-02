@@ -87,3 +87,5 @@ https://codepen.io/Quper/pen/GRRZzWy
 https://my.methed.ru/pl/teach/control/lesson/view?id=332318735&editMode=0
 8:47 - [Render com]
   [мой сервис товаров](https://cup-time-api-q31j.onrender.com)
+
+>npm i react-modal  
