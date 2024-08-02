@@ -82,3 +82,8 @@ https://codepen.io/Quper/pen/GRRZzWy
 Обязательное задание:
 - Повторить то, что было в видео
 - Написать стили для модального окна и вывести в заголовке Products категорию товара
+
+
+https://my.methed.ru/pl/teach/control/lesson/view?id=332318735&editMode=0
+8:47 - [Render com]
+  [мой сервис товаров](https://cup-time-api-q31j.onrender.com)
