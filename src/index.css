@@ -34,7 +34,7 @@ a {
   color: inherit;
 }
 
-p{
+p {
   margin: 0;
 }
 
@@ -96,6 +96,11 @@ input[type="number"] {
   align-items: center;
   gap: 50px;
 }
+
+.header__menu-link.active {
+  color: #64099b;
+}
+
 
 .header__cart-link {
   width: 28px;
