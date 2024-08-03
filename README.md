@@ -91,3 +91,11 @@ https://my.methed.ru/pl/teach/control/lesson/view?id=332318735&editMode=0
 >npm i react-modal  
 
 ---
+День 6 Настроим корректное добавление товаров в Корзину и правильный подсчёт суммы.
+
+Полезные ссылки  
+- [React Content Loader](https://www.npmjs.com/package/react-content-loader)
+
+Обязательное задание:  
+- Повторить то, что было в видео
+
