@@ -96,6 +96,8 @@ https://my.methed.ru/pl/teach/control/lesson/view?id=332318735&editMode=0
 Полезные ссылки  
 - [React Content Loader](https://www.npmjs.com/package/react-content-loader)
 
+>npm i react-content-loader
+
 Обязательное задание:  
 - Повторить то, что было в видео
 

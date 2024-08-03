@@ -273,3 +273,9 @@ input[type="number"] {
   gap: 12px;
   align-items: center;
 }
+
+.skeleton-wrapper {
+  width: 100%;
+  height: 600px;
+  background-color: #f2f9f7;
+}

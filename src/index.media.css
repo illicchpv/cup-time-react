@@ -37,6 +37,11 @@
   .footer__menu {
     gap: 32px;
   }
+
+  /*  */
+  .skeleton-wrapper {
+    height: 450px;
+  }
 }
 
 @media (max-width: 940px) {
@@ -125,6 +130,10 @@
     margin-bottom: 12px;
   }
 
+  /*  */
+  .skeleton-wrapper {
+    height: 360px;
+  }  
 }
 
 @media (max-width: 660px) {
