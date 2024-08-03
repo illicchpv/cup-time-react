@@ -1,5 +1,6 @@
 import Modal from "react-modal";
 import {API_URL} from "../const";
+import {useState} from "react";
 
 const customStyles = {
   content: {
@@ -15,9 +16,22 @@ const customStyles = {
 Modal.setAppElement('#root');
 
 export const ProductModal = ({isOpen, onRequestClose, data}) => {
+  const [quantity, setQuantity] = useState(1);
+
   if (!data) return null;
   const {img: image, title, price, additional = {}} = data;
-  console.log('additional: ', additional);
+  // console.log('additional: ', additional);
+
+  const handleDecrementQuantity = () => {
+    if (quantity > 1) setQuantity(quantity - 1);
+  };
+  const handleIncrementQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+  const handleAddToCart = () => {
+    // !todo add to cart
+    console.log('handleAddToCart');
+  };
 
   return (
     <Modal style={customStyles}
@@ -37,6 +51,19 @@ export const ProductModal = ({isOpen, onRequestClose, data}) => {
         ))}
       </ul>
 
+      <div>
+        <button
+          onClick={handleDecrementQuantity}
+        >-</button>
+        <input type="number" min="1"
+          value={quantity} readOnly
+        />
+        <button
+          onClick={handleIncrementQuantity}
+        >+</button>
+      </div>
+
+      <button onClick={handleAddToCart}>добавить в корзину</button>
       <button onClick={onRequestClose}>Закрыть</button>
     </Modal>
   );

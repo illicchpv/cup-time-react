@@ -7,11 +7,14 @@ import './index.media.css';
 import './cart.css';
 import './cart.media.css';
 import {ProductProvider} from './context/ProductContext.jsx';
+import {CartProvider} from './context/CartContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ProductProvider>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
     </ProductProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
