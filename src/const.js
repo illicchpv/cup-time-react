@@ -27,3 +27,25 @@ https://cup-time-api-q31j.onrender.com/api/products
 }
     
 */
+
+export function calcTotalCount(cart) {
+  if(!cart) return 0;
+  return cart.reduce((acc, p) => acc + p.quantity, 0);
+}
+
+export function translateCategory(category) {
+  switch (category) {
+    case 'tea':
+      return 'Чаи';
+    case 'coffee':
+      return 'Кофе';
+    case 'teapots':
+      return 'Чайники';
+    case 'cezves':
+      return 'Турки';
+    case 'other':
+      return 'Прочее';
+    default:
+      return category;
+  }
+}

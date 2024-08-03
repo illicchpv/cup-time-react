@@ -8,12 +8,13 @@ export const CartProvider = ({children}) => {
   useEffect(() => {
     const storeCart = JSON.parse(localStorage.getItem('cart') || '[]');
     setCart(storeCart);
+    console.log('storeCart: ', storeCart);
   }, []);
 
   useEffect(() => {
     if(Array.isArray(cart)) {
       localStorage.setItem('cart', JSON.stringify(cart));
-    }
+    } 
   }, [cart]);
 
   const addToCart = (product, quantity) => {

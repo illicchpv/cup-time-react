@@ -8,7 +8,7 @@
   }
 
   .cart__items {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   }
 
   .cart-item__title {
@@ -44,7 +44,7 @@
 
   .cart__items {
     order: 3;
-    grid-template-columns: repeat(auto-fit, minmax(159px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(159px, 1fr));
   }
 
   .cart-item__title {
@@ -153,7 +153,7 @@
 
   .cart__items {
     grid-column: 1 / -1;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 8px;
   }
 

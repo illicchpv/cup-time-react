@@ -3,8 +3,13 @@ import {Products} from "./Products";
 import {Promo} from "./Promo";
 import {Cart} from "./Cart";
 import {Order} from "./Order";
+import {useCart} from "../context/CartContext";
+import {calcTotalCount} from "../const";
 
 export const Main = () => {
+  const {cart} = useCart();
+  const totalCnt = calcTotalCount(cart);
+
   return (
     <main className="main">
       <Routes>
@@ -17,7 +22,7 @@ export const Main = () => {
 
         <Route path="/cart" element={<>
           <Cart />
-          <Order />
+          {!totalCnt || <Order />}
         </>} />
 
         <Route path="*" element={
