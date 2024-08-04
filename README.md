@@ -101,3 +101,19 @@ https://my.methed.ru/pl/teach/control/lesson/view?id=332318735&editMode=0
 Обязательное задание:  
 - Повторить то, что было в видео
 
+---
+День 7 Допиливаем проект. Данные выгружаются на сервер.
+
+Полезные ссылки:  
+- [https://realfavicongenerator.net/](https://realfavicongenerator.net/)
+- [https://vercel.com/](https://vercel.com/)
+
+
+[4.31 КБ Скачать стили](https://fs24.getcourse.ru/fileservice/file/download/a/251231/sc/114/h/26f37d339f05c727f53f92a0d267cf94.zip)
+
+Обязательное задание:
+- Повторить то, что было в видео
+- Выгрузите проект в репозиторий и выложите его в сеть
+
+Бонус задание:
+- Стили для компонентов разбейте на модульные, от всех дефисов лучше избавиться и использовать camelCase например вместо logo-black использовать logoBlack
