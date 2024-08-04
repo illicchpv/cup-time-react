@@ -38,23 +38,6 @@ export function calcTotalCount(cart) {
   return cart.reduce((acc, p) => acc + p.quantity, 0);
 }
 
-export function translateCategory(category) {
-  switch (category) {
-    case 'tea':
-      return 'Чаи';
-    case 'coffee':
-      return 'Кофе';
-    case 'teapots':
-      return 'Чайники';
-    case 'cezves':
-      return 'Турки';
-    case 'other':
-      return 'Прочее';
-    default:
-      return category;
-  }
-}
-
 export const debounce = (fn, ms) => {
   let lastCall = 0;
   let lastCallTimer = 0;

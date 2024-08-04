@@ -151,7 +151,7 @@
   margin-bottom: 32px;
 }
 
-.order__container {}
+/* .order__container {} */
 
 .order__form {
   display: grid;
@@ -193,7 +193,7 @@
   font-size: 20px;
 }
 
-.order__data-fields {}
+/* .order__data-fields {} */
 
 .order__radio {
   margin-right: 8px;
@@ -204,9 +204,9 @@
   margin-top: 8px;
 }
 
-.order__input_name {}
+/* .order__input_name {} */
 
-.order__input_phone {}
+/* .order__input_phone {} */
 
 
 /* modal-cart */

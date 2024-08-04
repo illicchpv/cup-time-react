@@ -1,11 +1,13 @@
 import {Link, useLocation} from "react-router-dom";
 import {useCart} from "../context/CartContext";
 import {calcTotalCount} from "../const";
+import {useProduct} from "../context/ProductContext";
 
 export const Header = () => {
   const location = useLocation();
   const {cart} = useCart();
-  const totalCnt = calcTotalCount(cart);  
+  const totalCnt = calcTotalCount(cart);
+  const {categories} = useProduct();
 
   const getActiveClass = (category) => {
     const currentCategory = new URLSearchParams(location.search).get("category");
@@ -21,21 +23,14 @@ export const Header = () => {
 
         <nav className="header__nav">
           <ul className="header__menu">
-            <li className="header__menu-item">
-              <Link className={`header__menu-link ${getActiveClass("tea")}`} to="/products?category=tea">Чай</Link>
-            </li>
-            <li className="header__menu-item">
-              <Link  className={`header__menu-link ${getActiveClass("coffee")}`} to="/products?category=coffee">Кофе</Link>
-            </li>
-            <li className="header__menu-item">
-              <Link className={`header__menu-link ${getActiveClass("teapots")}`} to="/products?category=teapots">Чайники</Link>
-            </li>
-            <li className="header__menu-item">
-              <Link className={`header__menu-link ${getActiveClass("cezves")}`} to="/products?category=cezves">Турки</Link>
-            </li>
-            <li className="header__menu-item">
-              <Link className={`header__menu-link ${getActiveClass("other")}`} to="/products?category=other">Прочее</Link>
-            </li>
+            {Object.keys(categories).map((category) =>
+              <li className="header__menu-item" key={category}>
+                <Link className={`header__menu-link ${getActiveClass(category)}`}
+                  to={`/products?category=${category}`}
+                >{categories[category]}
+                </Link>
+              </li>)
+            }
           </ul>
         </nav>
 

@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 import {useState} from "react";
 import {API_URL_POST_ORDER, calcTotalCount} from "../const";
 import {useCart} from "../context/CartContext";
@@ -47,7 +45,7 @@ export const Cart = () => {
         const {errors} = eresult;
         if (errors) {
           // {value: '', msg: 'Имя обязательно', param: 'name', location: 'body'}
-          errors.forEach(e => console.error('POST_ORDER', e.msg, 'param:', e.param, 'location:', e.location));
+          errors.forEach(e => console.error('POST_ORDER', e.msg, ' -- param:', e.param, ', location:', e.location));
         }
         throw new Error('POST_ORDER Error fetching products.');
       }

@@ -2,7 +2,6 @@ import {useState} from "react";
 import {API_URL} from "../const";
 import {ProductModal} from "./ProductModal";
 
-/* eslint-disable react/prop-types */
 export const Product = (data) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const {title, price, img: image} = data;

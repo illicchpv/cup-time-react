@@ -1,11 +1,13 @@
 import {Link} from "react-router-dom";
+import {useProduct} from "../context/ProductContext";
 
 export const Footer = () => {
+  const {categories} = useProduct();
   const getActiveClass = (category) => {
     const currentCategory = new URLSearchParams(location.search).get("category");
     return currentCategory === category ? "active" : "";
   };
-  
+
   return (
     <footer className="footer">
       <div className="container footer__container">
@@ -15,22 +17,14 @@ export const Footer = () => {
 
         <div className="footer__nav">
           <ul className="footer__menu">
-            <li className="ooter__menu-item">
-              <Link className={`ooter__menu-link ${getActiveClass("tea")}`} to="/products?category=tea">Чай</Link>
-            </li>
-            <li className="ooter__menu-item">
-              <Link  className={`ooter__menu-link ${getActiveClass("coffee")}`} to="/products?category=coffee">Кофе</Link>
-            </li>
-            <li className="ooter__menu-item">
-              <Link className={`ooter__menu-link ${getActiveClass("teapots")}`} to="/products?category=teapots">Чайники</Link>
-            </li>
-            <li className="ooter__menu-item">
-              <Link className={`ooter__menu-link ${getActiveClass("cezves")}`} to="/products?category=cezves">Турки</Link>
-            </li>
-            <li className="ooter__menu-item">
-              <Link className={`ooter__menu-link ${getActiveClass("other")}`} to="/products?category=other">Прочее</Link>
-            </li>
-
+            {Object.keys(categories).map((category) =>
+              <li className="footer__menu-item" key={category}>
+                <Link className={`footer__menu-link ${getActiveClass(category)}`}
+                  to={`/products?category=${category}`}
+                >{categories[category]}
+                </Link>
+              </li>)
+            }
           </ul>
         </div>
 
