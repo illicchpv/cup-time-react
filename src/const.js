@@ -3,8 +3,13 @@ export const API_URL = 'https://cup-time-api-q31j.onrender.com';
 export const API_URL_ALL_PRODUCTS = 'https://cup-time-api-q31j.onrender.com/api/products';
 export const API_URL_PRODUCTS_BY_CATEGORY = 'https://cup-time-api-q31j.onrender.com/api/products/';
 export const API_URL_PRODUCTS_BY_IDS = 'https://cup-time-api-q31j.onrender.com/api/products/list?ids=';
+export const API_URL_POST_ORDER = 'https://cup-time-api-q31j.onrender.com/api/orders';
 
 /*
+https://cup-time-api-q31j.onrender.com/api-docs/
+  Product API
+ 
+
 https://cup-time-api-q31j.onrender.com/api/products
 
 /api/products/{category} // получить продукты по категории
@@ -49,3 +54,17 @@ export function translateCategory(category) {
       return category;
   }
 }
+
+export const debounce = (fn, ms) => {
+  let lastCall = 0;
+  let lastCallTimer = 0;
+
+  return function (...args) {
+    const prevCall = lastCall;
+    lastCall = Date.now();
+    if (prevCall && lastCall - prevCall < ms) {
+      clearTimeout(lastCallTimer);
+    }
+    lastCallTimer = setTimeout(() => fn.apply(this, args), ms);
+  };
+};

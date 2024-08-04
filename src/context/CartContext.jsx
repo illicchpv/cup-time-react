@@ -8,7 +8,6 @@ export const CartProvider = ({children}) => {
   useEffect(() => {
     const storeCart = JSON.parse(localStorage.getItem('cart') || '[]');
     setCart(storeCart);
-    console.log('storeCart: ', storeCart);
   }, []);
 
   useEffect(() => {
@@ -47,8 +46,12 @@ export const CartProvider = ({children}) => {
     }
   };
 
+  const clearCart = () => {
+    setCart([]);
+  }
+
   return (
-    <CartContext.Provider value={{cart, addToCart, removeFromCart, updateQuantity}}>
+    <CartContext.Provider value={{cart, addToCart, removeFromCart, updateQuantity, clearCart}}>
       {children}
     </CartContext.Provider>
   );

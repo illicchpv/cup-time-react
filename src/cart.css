@@ -209,3 +209,39 @@
 .order__input_phone {}
 
 
+/* modal-cart */
+.modal-cart__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+}
+
+.modal-cart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 30px;
+
+}
+
+.modal-cart__title {
+  font-weight: 400;
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.modal-cart__button {
+  background-color: #64099b;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
