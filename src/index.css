@@ -140,6 +140,7 @@ input[type="number"] {
 }
 
 .promo__container {
+  min-height: 600px;  
   padding-top: 210px;
   padding-bottom: 80px;
   background-image: url(../image/promo.png);
@@ -276,6 +277,11 @@ input[type="number"] {
 .footer__menu-link {
   color: #fff;
   text-decoration: none;
+}
+
+.footer__menu-link.active {
+  color: #64099b;
+  cursor: default;
 }
 
 .footer__email {

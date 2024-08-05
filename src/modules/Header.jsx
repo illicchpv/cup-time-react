@@ -65,7 +65,6 @@ export const Header = () => {
               <rect x="4" y="14.5" width="20" height="1" fill="#D9D9D9" />
               <rect x="4" y="19.5" width="20" height="1" fill="#D9D9D9" />
             </svg>
-
           </button>
         </div>
       </div>

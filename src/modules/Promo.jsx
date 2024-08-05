@@ -10,10 +10,10 @@ export const Promo = () => {
         <div className="promo__container">
           <h1 className="promo__title">Попробуй новый вкус Арабики</h1>
 
-{category != "coffee" 
-  ? <Link className="promo__link" to="/products?category=coffee">Перейти к кофе</Link>
-  : <Link style={{visibility: "hidden"}} className="promo__link" to="/products?category=coffee">Перейти к кофе</Link>
-}
+          {category != "coffee"
+            ? <Link className="promo__link" to="/products?category=coffee">Перейти к кофе</Link>
+            : <Link style={{visibility: "hidden"}} className="promo__link" to="/products?category=coffee">Перейти к кофе</Link>
+          }
         </div>
       </div>
     </section>

@@ -104,6 +104,19 @@ https://my.methed.ru/pl/teach/control/lesson/view?id=332318735&editMode=0
 ---
 День 7 Допиливаем проект. Данные выгружаются на сервер.
 
+видео1:
+ - отправка order на сервер
+ - 39:00 стилизация диалога результата отправки modal cart
+ - 47:00 вывод заголовка категории товара 'categories' и формирование меню на основе categories
+ - 55:40 доделываем промо и ссылка на промо
+
+видео2:
+- favicon generator
+- 06:00 доделываем промо
+- 7:40 мобильное меню
+- 21:25 модальное окно продукта
+- 37:50 - выгрузка на vercel
+
 Полезные ссылки:  
 - [https://realfavicongenerator.net/](https://realfavicongenerator.net/)
 - [https://vercel.com/](https://vercel.com/)
@@ -118,4 +131,3 @@ https://my.methed.ru/pl/teach/control/lesson/view?id=332318735&editMode=0
 Бонус задание:
 - Стили для компонентов разбейте на модульные, от всех дефисов лучше избавиться и использовать camelCase например вместо logo-black использовать logoBlack
 
-37:50 - выгрузка на vercel
