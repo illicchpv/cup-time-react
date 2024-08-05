@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import {useContext, useEffect} from "react";
+import {useContext, useEffect, useRef} from "react";
 import {useState} from "react";
 import {createContext} from "react";
 import {API_URL_PRODUCTS_BY_CATEGORY} from "../const";
@@ -9,6 +9,8 @@ const ProductContext = createContext();
 export const ProductProvider = ({children}) => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState('');
+  const productsRef = useRef(null);
+
   const categories = {
     tea:      'Чаи',
     coffee:      'Кофе',
@@ -32,7 +34,7 @@ export const ProductProvider = ({children}) => {
   }, [category]);
 
   return (
-    <ProductContext.Provider value={{products, setCategory, categories}}>
+    <ProductContext.Provider value={{products, setCategory, categories, productsRef}}>
       {children}
     </ProductContext.Provider>
   );

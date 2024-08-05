@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import {Link, useLocation} from "react-router-dom";
 import {useCart} from "../context/CartContext";
-import {calcTotalCount} from "../const";
+import {calcTotalCount, getActiveClass} from "../const";
 import {useProduct} from "../context/ProductContext";
 import {useEffect, useState} from "react";
 
@@ -14,15 +14,9 @@ export const Header = () => {
   const openMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
 
-
-  const getActiveClass = (category) => {
-    const currentCategory = new URLSearchParams(location.search).get("category");
-    return currentCategory === category ? "active" : "";
-  };
-
-  // useEffect(() => {
-  //   document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
-  // }, [isMenuOpen]);
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+  }, [isMenuOpen]);
 
   return (
     <header className="header">
@@ -44,7 +38,7 @@ export const Header = () => {
             }
           </ul>
 
-          <button className="header__close-btn"
+          <button className="header__close-btn" aria-label="Закрыть меню"
             onClick={closeMenu}
           >
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">

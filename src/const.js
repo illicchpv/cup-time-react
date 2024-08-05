@@ -51,3 +51,8 @@ export const debounce = (fn, ms) => {
     lastCallTimer = setTimeout(() => fn.apply(this, args), ms);
   };
 };
+
+export const getActiveClass = (category) => {
+  const currentCategory = new URLSearchParams(location.search).get("category");
+  return currentCategory === category ? "active" : "";
+};
