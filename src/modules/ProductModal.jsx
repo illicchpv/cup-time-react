@@ -2,17 +2,7 @@ import Modal from "react-modal";
 import {API_URL} from "../const";
 import {useState} from "react";
 import {useCart} from "../context/CartContext";
-
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
+import s from "./ProductModal.module.css";
 
 Modal.setAppElement('#root');
 
@@ -36,37 +26,65 @@ export const ProductModal = ({isOpen, onRequestClose, data}) => {
   };
 
   return (
-    <Modal style={customStyles}
+    <Modal className={s.modal} overlayClassName={s.overlay}
       isOpen={isOpen}
       onRequestClose={onRequestClose}
-      contentLabel="Product Modal"
+      contentLabel={title}
     >
-      <h2>{title}</h2>
+      <img className={s.image} src={`${API_URL}${image}`} alt={title} />
 
-      <img src={`${API_URL}${image}`} alt={title} />
+      <div className={s.content}>
+        <div className={s.header}>
+          <h2 className={s.title}>{title}</h2>
 
-      <p>{price}</p>
+          <p className={s.price}>{price}&nbsp;₽</p>
+        </div>
 
-      <ul>
-        {Object.entries(additional).map(([key, val]) => (
-          <li key={key}><strong>{key}:</strong> {val}</li>
-        ))}
-      </ul>
+        <ul className={s.list}>
+          {Object.entries(additional).map(([key, val]) => (
+            <li className={s.item} key={key}>
+              <span className={s.field}>{key}:</span>
+              <span className={s.value}>{val}</span></li>
+          ))}
+        </ul>
 
-      <div>
-        <button
-          onClick={handleDecrementQuantity}
-        >-</button>
-        <input type="number" min="1"
-          value={quantity} readOnly
-        />
-        <button
-          onClick={handleIncrementQuantity}
-        >+</button>
+        <div className={s.footer}>
+          <div className={s.count}>
+            <button className={s.btn}
+              onClick={handleDecrementQuantity}
+            >
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="35" height="35" rx="3.5" stroke="#B8B8B8" />
+                <rect x="12" y="17" width="12" height="2" fill="#1D1C1D" />
+              </svg>
+            </button>
+
+            <input className={s.number} type="number" min="1"
+              value={quantity} readOnly
+            />
+
+            <button className={s.btn}
+              onClick={handleIncrementQuantity}
+            >
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="35" height="35" rx="3.5" stroke="#B8B8B8" />
+                <rect x="12" y="17.25" width="12" height="1.5" fill="#1D1C1D" />
+                <rect x="17.25" y="24" width="12" height="1.5" transform="rotate(-90 17.25 24)" fill="#1D1C1D" />
+              </svg>
+            </button>
+          </div>
+
+          <button className={s.btnAddCart} onClick={handleAddToCart}>добавить</button>
+        </div>
+
       </div>
 
-      <button onClick={handleAddToCart}>добавить в корзину</button>
-      <button onClick={onRequestClose}>Закрыть</button>
+      <button className={s.btnCloseCard} onClick={onRequestClose}>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5.71228" y="14.1975" width="12" height="1.5" transform="rotate(-45 5.71228 14.1975)" fill="#B8B8B8" />
+          <rect x="14.1976" y="15.2582" width="12" height="1.5" transform="rotate(-135 14.1976 15.2582)" fill="#B8B8B8" />
+        </svg>
+      </button>
     </Modal>
   );
 };

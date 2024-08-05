@@ -117,3 +117,4 @@ https://my.methed.ru/pl/teach/control/lesson/view?id=332318735&editMode=0
 
 Бонус задание:
 - Стили для компонентов разбейте на модульные, от всех дефисов лучше избавиться и использовать camelCase например вместо logo-black использовать logoBlack
+

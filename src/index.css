@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  min-width: 320px;
   font-family: Inter, sans-serif;
   background-color: #fff;
   font-size: 20px;
@@ -85,6 +86,7 @@ input[type="number"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 6px;
 }
 
 .header__logo-link {
@@ -100,7 +102,6 @@ input[type="number"] {
 .header__menu-link.active {
   color: #64099b;
 }
-
 
 .header__cart-link {
   width: 28px;
@@ -118,6 +119,20 @@ input[type="number"] {
   padding: 10px 4px 3px;
 }
 
+.header__control {
+  display: flex;
+  align-items: center;
+  gap: 16px
+}
+
+.header__close-btn {
+  display: none;
+}
+
+.header__burger {
+  display: none;
+}
+
 /* promo */
 .promo {
   background-color: #6cb9ab;
@@ -130,6 +145,7 @@ input[type="number"] {
   background-image: url(../image/promo.png);
   background-repeat: no-repeat;
   background-position: right 113px bottom 0;
+  min-height: 600px;
 }
 
 .promo__title {
@@ -173,7 +189,7 @@ input[type="number"] {
   overflow: hidden;
   font-size: 0;
   background: #f2f9f7;
-  min-height: 600px;
+  /* min-height: 600px; */
   height: 100%;
   display: flex;
   flex-direction: column;
