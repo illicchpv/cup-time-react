@@ -9,7 +9,7 @@ const orderDetailsDefault = {
   name: "",
   phone: "",
   address: "",
-  payment: "cash",
+  payment: "card",
 };
 
 export const OrderProvider = ({children}) => {

@@ -13,7 +13,7 @@ export const Main = () => {
   return (
     <main className="main">
       <Routes>
-        <Route path="/" element={<Navigate to="/products?category=tea" />} />
+        <Route path="/" element={<Navigate to="/products?category=coffee" />} />
 
         <Route path="/products" element={<>
           <Promo />
