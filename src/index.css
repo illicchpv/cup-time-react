@@ -46,14 +46,22 @@ img {
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
+  margin: 0;
 }
 
 input[type="number"] {
   -webkit-appearance: none;
+  -webkit-appearance: textfield;
   -moz-appearance: none;
   appearance: none;
   margin: 0;
+}
+
+input[type=number].number-to-text {
+  -moz-appearance: textfield;
+  appearance: none;
 }
 
 .container {
