@@ -1,16 +1,19 @@
 import {Link} from "react-router-dom";
 import {useProduct} from "../context/ProductContext";
-import {getActiveClass} from "../const";
+import {calcTotalCount, getActiveClass} from "../const";
+import {useCart} from "../context/CartContext";
 
 export const Footer = () => {
   const {categories, productsRef} = useProduct();
+  const {cart} = useCart();
+  const isCartEmpty = calcTotalCount(cart) === 0 ? 'isCartEmpty' : '';
 
   const scrollToProducts = () => {
     setTimeout(() => productsRef.current.scrollIntoView({block: 'start', behavior: 'smooth'}), 300);
   };
 
   return (
-    <footer className="footer">
+    <footer className={`footer ${isCartEmpty}`}>
       <div className="container footer__container">
         <a className="footer__logo-link" href="#!">
           <img className="footer__logo" src="./image/logo.svg" alt="Cup time логотип" />

@@ -13,13 +13,14 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const openMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
+  const isCartEmpty = calcTotalCount(cart) === 0 ? 'isCartEmpty' : '';
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
   }, [isMenuOpen]);
 
   return (
-    <header className="header">
+    <header className={`header ${isCartEmpty}`}>
       <div className="container header__container">
         <Link className="header__logo-link" to="/">
           <img className="header__logo" src="./image/logo.svg" alt="Cup time логотип" />

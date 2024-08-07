@@ -9,9 +9,10 @@ import {calcTotalCount} from "../const";
 export const Main = () => {
   const {cart} = useCart();
   const totalCnt = calcTotalCount(cart);
+  const isCartEmpty = calcTotalCount(cart) === 0 ? 'isCartEmpty' : '';
 
   return (
-    <main className="main">
+    <main className={`main ${isCartEmpty}`}>
       <Routes>
         <Route path="/" element={<Navigate to="/products?category=coffee" />} />
 
