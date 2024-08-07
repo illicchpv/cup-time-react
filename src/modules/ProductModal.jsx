@@ -15,6 +15,7 @@ export const ProductModal = ({isOpen, onRequestClose, data}) => {
   // console.log('additional: ', additional);
 
   const handleDecrementQuantity = () => {
+    console.log('quantity: ', quantity);
     if (quantity > 1) setQuantity(quantity - 1);
   };
   const handleIncrementQuantity = () => {
@@ -59,9 +60,10 @@ export const ProductModal = ({isOpen, onRequestClose, data}) => {
               </svg>
             </button>
 
-            <input className={s.number} type="number" min="1"
+            {/* <input className={s.number} type="number" min="1"
               value={quantity} readOnly
-            />
+            /> */}
+            <span className={s.number}>{quantity}</span>
 
             <button className={s.btn}
               onClick={handleIncrementQuantity}

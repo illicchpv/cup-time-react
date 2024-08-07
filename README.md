@@ -4,6 +4,8 @@ https://www.figma.com/design/HxIGMimYUO3N82xLzUf6XO/CUP-TIME-(Intensive)-(Copy)?
 
 github: https://github.com/illicchpv/cap-time-dev
 
+результат: https://cup-time-react-blue.vercel.app/products
+
 ---
 day1  
   Обязательное задание:  

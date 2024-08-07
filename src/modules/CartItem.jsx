@@ -10,7 +10,7 @@ export const CartItem = ({id, img, title, price, quantity}) => {
 
   const handleDecrementQuantity = () => {
     const newQuantity = itemQuantity - 1;
-    if (newQuantity > 1) {
+    if (newQuantity > 0) {
       setItemQuantity(newQuantity);
       updateQuantity(id, newQuantity);
     } else {
@@ -35,7 +35,8 @@ export const CartItem = ({id, img, title, price, quantity}) => {
             onClick={handleDecrementQuantity}
           >-</button>
 
-          <input className="cart-item__quantity-input" type="number" value={itemQuantity} readOnly />
+          {/* <input className="cart-item__quantity-input" type="number" value={itemQuantity} readOnly /> */}
+          <span className="cart-item__quantity-input">{itemQuantity}</span>
 
           <button className="cart-item__quantity-button cart-item__quantity-button_plus"
             onClick={handleIncrementQuantity}
