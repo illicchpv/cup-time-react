@@ -13,6 +13,7 @@ export const Cart = () => {
   const [orderId, setOrderId] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const {orderDetails, clearOrderDetails} = useOrder();
+  const [orderError, setOrderError] = useState([]);
 
   const closeModal = () => {
     setModalIsOpen(false);
@@ -42,10 +43,12 @@ export const Cart = () => {
 
       if (!response.ok) {
         const eresult = await response.json();
-        const {errors} = eresult;
+        let {errors} = eresult;
         if (errors) {
           // {value: '', msg: 'Имя обязательно', param: 'name', location: 'body'}
           errors.forEach(e => console.error('POST_ORDER', e.msg, ' -- param:', e.param, ', location:', e.location));
+          errors = errors.filter(e => e.location === 'body');
+          setOrderError(errors);
         }
         throw new Error('POST_ORDER Error fetching products.');
       }
@@ -103,6 +106,9 @@ export const Cart = () => {
             : 'Произошла ошибка при оформлении заказа.'
           }
         </h2>
+        <ul className="modal-cart__error-list">
+          {orderError.map(({msg}) => <li key={msg}>{msg}</li>)}
+        </ul>
         <button className="modal-cart__button" onClick={closeModal}>закрыть</button>
       </Modal>
     </section>
