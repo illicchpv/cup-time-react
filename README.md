@@ -145,5 +145,12 @@ https://my.methed.ru/pl/teach/control/lesson/view?id=332318735&editMode=0
 - 1:23:00 - переход на верх секции при выборе категории
 
 
+--------------------
+--------------------
 
+https://www.youtube.com/watch?v=kIfIGrhjOe4
+	Превращаем существующее веб приложение в  PWA #easyit #js #javascript @EasyITChannel
+  ветка: vite-plugin-pwa
+		https://vite-pwa-org.netlify.app/
+		>npm install -D vite-plugin-pwa
 
