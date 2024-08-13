@@ -154,3 +154,6 @@ https://www.youtube.com/watch?v=kIfIGrhjOe4
 		https://vite-pwa-org.netlify.app/
 		>npm install -D vite-plugin-pwa
 
+-------------
+-------------
+добавляем константу - __BUILD_DATE__ - дата сборки

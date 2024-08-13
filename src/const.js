@@ -56,3 +56,6 @@ export const getActiveClass = (category) => {
   const currentCategory = new URLSearchParams(location.search).get("category");
   return currentCategory === category ? "active" : "";
 };
+
+// eslint-disable-next-line no-undef
+export const buildDate = new Date(__BUILD_DATE__).toLocaleString('ru', {year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'});

@@ -1,4 +1,5 @@
 import {Link, useSearchParams} from "react-router-dom";
+import {buildDate} from "../const";
 
 export const Promo = () => {
   const [searchParams] = useSearchParams();
@@ -8,7 +9,7 @@ export const Promo = () => {
     <section className="promo">
       <div className="container">
         <div className="promo__container">
-          <h1 className="promo__title">Попробуй новый вкус Арабики</h1>
+          <h1 className="promo__title" title={`buildDate: ${buildDate}`}>Попробуй новый вкус Арабики</h1>
 
           {category != "coffee"
             ? <Link className="promo__link" to="/products?category=coffee">Перейти к кофе</Link>
