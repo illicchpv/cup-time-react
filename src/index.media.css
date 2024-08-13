@@ -18,7 +18,7 @@
   .promo__container {
     padding-top: 172px;
     padding-bottom: 60px;
-    background-image: url(../image/promo-2.png);
+    background-image: url(/image/promo-2.png);
     background-position: right 48px bottom 0;
   }
 

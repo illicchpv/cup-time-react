@@ -7,4 +7,13 @@ export default defineConfig({
     __BUILD_DATE__: JSON.stringify(new Date().valueOf()),
   },
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/[name].js`,
+        chunkFileNames: `assets/[name].js`,
+        assetFileNames: `assets/[name].[ext]`
+      }
+    }
+  }
 });

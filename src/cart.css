@@ -113,11 +113,11 @@
 }
 
 .cart-item__quantity-button_minus {
-  background-image: url(../image/minus.svg);
+  background-image: url(/image/minus.svg);
 }
 
 .cart-item__quantity-button_plus {
-  background-image: url(../image/plus.svg);
+  background-image: url(/image/plus.svg);
 }
 
 .cart-item__quantity-input {

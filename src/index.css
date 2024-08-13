@@ -3,7 +3,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/inter-v13-cyrillic_latin-regular.woff2') format('woff2');
+  src: url('/fonts/inter-v13-cyrillic_latin-regular.woff2') format('woff2');
 }
 
 html {
@@ -142,7 +142,7 @@ input[type="number"] {
   min-height: 600px;  
   padding-top: 210px;
   padding-bottom: 80px;
-  background-image: url(../image/promo.png);
+  background-image: url(/image/promo.png);
   background-repeat: no-repeat;
   background-position: right 113px bottom 0;
   min-height: 600px;
