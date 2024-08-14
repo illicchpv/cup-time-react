@@ -9,7 +9,7 @@ export const Header = () => {
   const location = useLocation();
   const {cart} = useCart();
   const totalCnt = calcTotalCount(cart);
-  const {categories} = useProduct();
+  const {categories, setCategory} = useProduct();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const openMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
@@ -50,7 +50,9 @@ export const Header = () => {
         </nav>
 
         <div className="header__control">
-          <Link className="header__cart-link" to="/cart">{totalCnt}</Link>
+          <Link className="header__cart-link" to="/cart"
+            onClick={()=>setCategory('')}
+          >{totalCnt}</Link>
 
           <button className="header__burger" aria-label="Открыть меню"
             onClick={openMenu}
