@@ -157,3 +157,6 @@ https://www.youtube.com/watch?v=kIfIGrhjOe4
 -------------
 -------------
 добавляем константу - __BUILD_DATE__ - дата сборки
+
+---
+вернулся к хешам в ссылках на index.js и index.css
